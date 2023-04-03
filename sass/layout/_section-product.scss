@@ -9,6 +9,10 @@
     text-align: center;
     letter-spacing: 0.03em;
   }
+
+  @include mq(only-tablet) {
+    display: none;
+  }
 }
 
 .product {

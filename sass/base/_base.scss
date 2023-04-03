@@ -30,35 +30,24 @@ p {
   padding-left: 15px;
   padding-right: 15px;
   
-  // @include mq(tablet) {
-  //   max-width: 768px; 
-  // }
+ @include mq(tablet) {
+  max-width: 768px;
+ }
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;    
+  @include mq(desktop) {
+    max-width: 1200px;
   }
 
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px; 
-    padding-left: 30px;   
-  }
-
-  // @include mq(desktop) {
-  //   max-width: 1200px;
-  //   padding-left: 30px;
-  // }
 }
 
 .section {
   padding-top: 60px;
-  padding-bottom: 60x;
- 
-  @include mq(desktop) {
-    min-width: 1200px;
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
- 
+  padding-bottom: 60px;
+  
+ @include mq(desktop) {
+  padding-top: 94px;
+  padding-bottom: 94px;
+ }
 }
 
 .link {

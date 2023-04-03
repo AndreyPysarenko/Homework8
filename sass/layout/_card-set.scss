@@ -1,11 +1,22 @@
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px 30px;
+  gap: 30px;
 
-  &__item {
-    flex-basis: calc((100% - 60px) / 3);
+  @include mq(desktop) {
+    gap: 30px 30px;
+  }
+
+  &__item {    
     cursor: pointer;
+
+    @include mq(tablet) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include mq(desktop) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
 
   &__link {

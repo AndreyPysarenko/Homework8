@@ -2,15 +2,17 @@
 
 @import "./base/variables";
 @import "./base/color";
+@import "./utils/mixins";
 @import "./base/base";
 
 // UTILS
-@import "./utils/mixin";
+
 @import "./utils/visually-hidden";
 
 // COMPONENTS
 
 @import "./components/button";
+@import "./components/modal-menu";
 @import "./components/modal-window";
 
 // LAYOUT

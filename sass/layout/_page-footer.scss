@@ -3,11 +3,28 @@
   padding: 60px 0;
 
   &__container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 70px;
-    align-items: baseline;
-    justify-content: space-between;
+    text-align: center;
+
+    @include mq(tablet) {
+      display: flex;
+            
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      padding-right: 74px;
+      padding-left: 89px;    
+    }   
+
+    @include mq(desktop) {
+      text-align: left;
+      gap: 70px;
+      // flex-wrap: wrap;
+      // align-items: baseline;            
+      // justify-content: space-between;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
 
   &__logo {
@@ -15,10 +32,14 @@
     margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: calc(31 / 26);
     letter-spacing: 0.03em;
     color: $accent-text-color;
+
+    @include mq(desktop) {
+      font-size: 26px;
+    }
 
     &--color {
       color: $title-text-color;
@@ -36,7 +57,11 @@
   }
 
   &__item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @include mq(desktop) {
+      margin-bottom: 9px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -83,12 +108,17 @@
 // Join
 
 .join-title {
+  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
   color: $title-text-color;
+
+  @include mq(tablet) {
+    margin-top: 0px;
+  }
 }
 
 .card-icons {
@@ -131,6 +161,20 @@
 
 // subscribe
 
+.subscribe {
+  padding-top: 60px;
+
+  @include mq(only-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+      }
+
+      @include mq(desktop) {
+        padding-top: 0;
+      }
+}
+
 .subscribe__title {
   display: inline-block;
   margin-bottom: 20px;
@@ -143,16 +187,38 @@
   text-transform: uppercase;
 
   color: $title-text-color;
+
+  @include mq(desktop) {
+    display: block;
+  }
 }
 
 .form-footer {
-  display: flex;
-  align-items: flex-end;
+  // display: flex;
+  // align-items: flex-end;
+
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include mq(desktop) {
+    align-items: flex-end;
+      flex-wrap: nowrap;
+  }
 
   & input {
-    width: 358px;
+    width: 450px;
     height: 50px;
-    margin-right: 12px;
+    margin-bottom: 20px;
+
+    @include mq(desktop) {
+      width: 358px;      
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+    
   }
 
   &__input {
